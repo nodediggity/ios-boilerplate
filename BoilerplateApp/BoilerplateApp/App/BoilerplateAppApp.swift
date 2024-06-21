@@ -19,7 +19,7 @@ struct BoilerplateAppApp: App {
                 ContentView(router: router)
                     .navigationDestination(for: ContentView.Route.self, destination: { route in
                         switch route {
-                            case let .details(id): DetailView(id: id)
+                            case let .details(id): DetailsView(id: id)
                         }
                     })
             })
