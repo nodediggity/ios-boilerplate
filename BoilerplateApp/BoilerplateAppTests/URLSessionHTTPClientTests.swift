@@ -99,6 +99,7 @@ private extension URLSessionHTTPClientTests {
         let session = URLSession(configuration: configuration)
         let sut = URLSessionHTTPClient(session: session)
 
+        trackForMemoryLeaks(session, file: file, line: line)
         trackForMemoryLeaks(sut, file: file, line: line)
 
         return sut
@@ -135,33 +136,5 @@ private extension URLSessionHTTPClientTests {
             XCTFail("Expected success but got failure instead", file: file, line: line)
             return nil
         }
-    }
-}
-
-extension XCTestCase {
-    func makeError(desc: String = "any error", code: Int = 0) -> NSError {
-        XCTestCase.makeError(desc: desc, code: code)
-    }
-
-    static func makeError(desc: String = "any error", code: Int = 0) -> NSError {
-        let userInfo = [NSLocalizedDescriptionKey: desc]
-        return NSError(domain: "test.domain.error", code: code, userInfo: userInfo)
-    }
-    
-    func makeURL(addr: String = "http://domain.tld") -> URL {
-        XCTestCase.makeURL(addr: addr)
-    }
-
-    static func makeURL(addr: String = "http://domain.tld") -> URL {
-        URL(string: addr)!
-    }
-    
-    func makeData(str: String? = .none) -> Data {
-        XCTestCase.makeData(str: str)
-    }
-
-    static func makeData(str: String? = .none) -> Data {
-        guard let str = str else { return Data() }
-        return Data(str.utf8)
     }
 }

@@ -23,6 +23,9 @@
 		599CE39E2C2628810016419B /* URLProtocol+Stub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599CE39D2C2628810016419B /* URLProtocol+Stub.swift */; };
 		599CE3A02C2629CB0016419B /* URLSessionHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599CE39F2C2629CB0016419B /* URLSessionHTTPClient.swift */; };
 		599CE3A22C262ACB0016419B /* AppDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599CE3A12C262ACB0016419B /* AppDependencies.swift */; };
+		599CE3A52C262B740016419B /* XCTestCase+MakeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599CE3A42C262B740016419B /* XCTestCase+MakeError.swift */; };
+		599CE3A72C262B950016419B /* XCTestCase+MakeURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599CE3A62C262B950016419B /* XCTestCase+MakeURL.swift */; };
+		599CE3A92C262BB40016419B /* XCTestCase+MakeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599CE3A82C262BB40016419B /* XCTestCase+MakeData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +66,9 @@
 		599CE39D2C2628810016419B /* URLProtocol+Stub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLProtocol+Stub.swift"; sourceTree = "<group>"; };
 		599CE39F2C2629CB0016419B /* URLSessionHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClient.swift; sourceTree = "<group>"; };
 		599CE3A12C262ACB0016419B /* AppDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDependencies.swift; sourceTree = "<group>"; };
+		599CE3A42C262B740016419B /* XCTestCase+MakeError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+MakeError.swift"; sourceTree = "<group>"; };
+		599CE3A62C262B950016419B /* XCTestCase+MakeURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+MakeURL.swift"; sourceTree = "<group>"; };
+		599CE3A82C262BB40016419B /* XCTestCase+MakeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+MakeData.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,9 +146,8 @@
 			children = (
 				59804D8B2C25F89F001E9230 /* AppRouterTests.swift */,
 				592A5DC62C258EFE00C44EE5 /* BoilerplateAppTests.swift */,
-				599CE39D2C2628810016419B /* URLProtocol+Stub.swift */,
 				599CE39B2C26285E0016419B /* URLSessionHTTPClientTests.swift */,
-				59804D8F2C260151001E9230 /* XCTestCase+MemoryLeakTracking.swift */,
+				599CE3A32C262B540016419B /* TestHelpers */,
 			);
 			path = BoilerplateAppTests;
 			sourceTree = "<group>";
@@ -162,6 +167,18 @@
 				59804D8A2C25F7AD001E9230 /* CI_iOS.xctestplan */,
 			);
 			path = XCTestPlans;
+			sourceTree = "<group>";
+		};
+		599CE3A32C262B540016419B /* TestHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				599CE39D2C2628810016419B /* URLProtocol+Stub.swift */,
+				599CE3A82C262BB40016419B /* XCTestCase+MakeData.swift */,
+				599CE3A42C262B740016419B /* XCTestCase+MakeError.swift */,
+				599CE3A62C262B950016419B /* XCTestCase+MakeURL.swift */,
+				59804D8F2C260151001E9230 /* XCTestCase+MemoryLeakTracking.swift */,
+			);
+			path = TestHelpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -309,9 +326,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				59804D8C2C25F89F001E9230 /* AppRouterTests.swift in Sources */,
+				599CE3A52C262B740016419B /* XCTestCase+MakeError.swift in Sources */,
 				592A5DC72C258EFE00C44EE5 /* BoilerplateAppTests.swift in Sources */,
 				59804D902C260151001E9230 /* XCTestCase+MemoryLeakTracking.swift in Sources */,
 				599CE39C2C26285E0016419B /* URLSessionHTTPClientTests.swift in Sources */,
+				599CE3A72C262B950016419B /* XCTestCase+MakeURL.swift in Sources */,
+				599CE3A92C262BB40016419B /* XCTestCase+MakeData.swift in Sources */,
 				599CE39E2C2628810016419B /* URLProtocol+Stub.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
