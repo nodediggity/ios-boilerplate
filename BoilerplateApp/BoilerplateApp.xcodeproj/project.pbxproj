@@ -15,6 +15,7 @@
 		592A5DD12C258EFE00C44EE5 /* BoilerplateAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592A5DD02C258EFE00C44EE5 /* BoilerplateAppUITests.swift */; };
 		592A5DD32C258EFE00C44EE5 /* BoilerplateAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592A5DD22C258EFE00C44EE5 /* BoilerplateAppUITestsLaunchTests.swift */; };
 		59804D8C2C25F89F001E9230 /* AppRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59804D8B2C25F89F001E9230 /* AppRouterTests.swift */; };
+		59804D8E2C25FF65001E9230 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59804D8D2C25FF65001E9230 /* AppRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		592A5DD22C258EFE00C44EE5 /* BoilerplateAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoilerplateAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		59804D8A2C25F7AD001E9230 /* CI_iOS.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = CI_iOS.xctestplan; sourceTree = "<group>"; };
 		59804D8B2C25F89F001E9230 /* AppRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouterTests.swift; sourceTree = "<group>"; };
+		59804D8D2C25FF65001E9230 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				592A5DB72C258EFA00C44EE5 /* ContentView.swift */,
 				592A5DB92C258EFD00C44EE5 /* Assets.xcassets */,
 				592A5DBB2C258EFD00C44EE5 /* Preview Content */,
+				59804D8D2C25FF65001E9230 /* AppRouter.swift */,
 			);
 			path = BoilerplateApp;
 			sourceTree = "<group>";
@@ -272,6 +275,7 @@
 			files = (
 				592A5DB82C258EFA00C44EE5 /* ContentView.swift in Sources */,
 				592A5DB62C258EFA00C44EE5 /* BoilerplateAppApp.swift in Sources */,
+				59804D8E2C25FF65001E9230 /* AppRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

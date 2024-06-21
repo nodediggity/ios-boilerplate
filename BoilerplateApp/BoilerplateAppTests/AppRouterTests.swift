@@ -7,22 +7,7 @@
 
 import XCTest
 import SwiftUI
-
-class AppRouter {
-    var path: [AnyHashable]
-
-    init(with path: [AnyHashable]) {
-        self.path = path
-    }
-    
-    func navigate(to destination: AnyHashable) {
-        path.append(destination)
-    }
-    
-    func pop() {
-        path.removeLast()
-    }
-}
+@testable import BoilerplateApp
 
 final class AppRouterTests: XCTestCase {
 
