@@ -10,7 +10,8 @@ import SwiftUI
 @main
 struct BoilerplateAppApp: App {
     
-    @State private var router: Router = AppRouter()
+    @State private var router = AppRouter()
+    @State private var dependencies = AppDependencies()
     
     var body: some Scene {
         WindowGroup {
