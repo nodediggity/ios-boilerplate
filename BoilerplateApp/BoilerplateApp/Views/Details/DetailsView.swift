@@ -1,5 +1,5 @@
 //
-//  DetailView.swift
+//  DetailsView.swift
 //  BoilerplateApp
 //
 //  Created by Gordon on 21/06/2024.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct DetailView: View {
+struct DetailsView: View {
     
     private let id: UUID
     
@@ -24,5 +24,5 @@ struct DetailView: View {
 }
 
 #Preview {
-    DetailView(id: UUID())
+    DetailsView(id: UUID())
 }
