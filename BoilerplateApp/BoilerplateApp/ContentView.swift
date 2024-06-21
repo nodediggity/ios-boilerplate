@@ -8,31 +8,34 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    private let router: Router
+    
+    init(router: Router) {
+        self.router = router
+    }
+    
     var body: some View {
-        NavigationStack {
-            NavigationLink(destination: DetailView()) {
-                Text("Show details")
-            }
-            .foregroundStyle(Color.primary)
-            .fontDesign(.rounded)
-            .font(.headline)
-            .padding()
-        }
+        Button(action: { route(to: .details(id: UUID())) }, label: {
+            Text("Show details")
+                .foregroundStyle(Color.primary)
+                .fontDesign(.rounded)
+                .font(.headline)
+                .padding()
+        })
+    }
+    
+    func route(to target: Route) {
+        router.navigate(to: target)
     }
 }
 
 extension ContentView {
-    struct DetailView: View {
-        var body: some View {
-            Text("<DetailView />")
-                .font(.largeTitle)
-                .padding()
-                .navigationBarTitleDisplayMode(.inline)
-                .navigationTitle("navigation details view")
-        }
+    enum Route: Hashable {
+        case details(id: UUID)
     }
 }
 
 #Preview {
-    ContentView()
+    ContentView(router: AppRouter(with: .init()))
 }

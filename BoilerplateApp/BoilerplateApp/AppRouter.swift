@@ -6,15 +6,23 @@
 //
 
 import Foundation
+import SwiftUI
 
-public final class AppRouter {
-    public var path: [AnyHashable]
+public protocol Router {
+    var path: NavigationPath { get set }
+    func navigate(to destination: any Hashable)
+    func pop()
+}
 
-    public init(with path: [AnyHashable]) {
+@Observable
+public final class AppRouter: Router {
+    public var path: NavigationPath
+
+    public init(with path: NavigationPath = NavigationPath()) {
         self.path = path
     }
     
-    public func navigate(to destination: AnyHashable) {
+    public func navigate(to destination: any Hashable) {
         path.append(destination)
     }
     
