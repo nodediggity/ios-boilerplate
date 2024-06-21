@@ -14,7 +14,7 @@
 ---
 
 - [x] Navigation
-- [ ] Networking
+- [x] Networking
 - [ ] Auth
 - [ ] Unit Tests
 - [ ] Snapshot Tests
