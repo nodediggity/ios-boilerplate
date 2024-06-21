@@ -10,17 +10,15 @@ import SwiftUI
 import BoilerplateApp
 
 final class AppRouterTests: XCTestCase {
-
+    
     func test_init_hasNoSideEffects() {
         let requests = [AnyHashable]()
-        XCTAssertTrue(requests.isEmpty)
-        
-        let sut = AppRouter(with: requests)
+        let sut = makeSUT(path: requests)
         XCTAssertTrue(sut.path.isEmpty)
     }
     
     func test_navigateTo_appendsRouteToPath() {
-        let sut = AppRouter(with: [UUID]())
+        let sut = makeSUT(path: [UUID]())
         
         let route = UUID()
         sut.navigate(to: route)
@@ -29,8 +27,8 @@ final class AppRouterTests: XCTestCase {
     }
     
     func test_navigateTo_hasNoSideEffectsOnMultipleCalls() {
-        let sut = AppRouter(with: [UUID]())
-        
+        let sut = makeSUT(path: [UUID]())
+
         let route = UUID()
         sut.navigate(to: route)
         sut.navigate(to: route)
@@ -39,8 +37,8 @@ final class AppRouterTests: XCTestCase {
     }
     
     func test_pop_removesTopItemInStack() {
-        let sut = AppRouter(with: [UUID]())
-        
+        let sut = makeSUT(path: [UUID]())
+
         let route = UUID()
         sut.navigate(to: route)
         
@@ -50,5 +48,13 @@ final class AppRouterTests: XCTestCase {
         
         XCTAssertTrue(sut.path.isEmpty)
     }
+    
+}
 
+private extension AppRouterTests {
+    func makeSUT(path: [AnyHashable] = [UUID](), file: StaticString = #filePath, line: UInt = #line) -> AppRouter {
+        let sut = AppRouter(with: path)
+        trackForMemoryLeaks(sut, file: file, line: line)
+        return sut
+    }
 }
