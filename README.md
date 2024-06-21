@@ -6,7 +6,23 @@
 
  iOS boilerplate for building iOS apps using SwiftUI. 
  
- Includes essential components such as networking, navigation, unit tests, and CI/CD setup. 
+ Includes essential components such as networking, navigation, unit tests, and CI/CD setup.
+ 
+
+ ## Features
+
+---
+
+- [ ] Navigation
+- [ ] Networking
+- [ ] Auth
+- [ ] Unit Tests
+- [ ] Snapshot Tests
+- [ ] Acceptance Tests
+- [ ] Dev/Release Environment
+- [ ] CI/CD
+- [ ] AppStore
+
 
 ## Getting started
 
