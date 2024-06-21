@@ -8,9 +8,9 @@ if [ "$#" -ne 1 ]; then
 fi
 
 OLD_NAME="BoilerplateApp"
-NEW_NAME=$(echo "$1" | sed 's:/*$::')
+NEW_NAME="${1%/}"  # Remove any trailing slashes
 
-SED_COMMAND="sed -i ''"
+SED_COMMAND=("sed" "-i" "")
 
 echo "🔍 old name: ${OLD_NAME}"
 echo "🔍 new name: ${NEW_NAME}"
@@ -21,14 +21,13 @@ process_file() {
     echo "⚙️ skipping binary file: $file"
   else
     echo "🔄 processing file: $file"
-    $SED_COMMAND "s/${OLD_NAME}/${NEW_NAME}/g" "$file"
+    "${SED_COMMAND[@]}" "s/${OLD_NAME}/${NEW_NAME}/g" "$file"
   fi
 }
 
 export -f process_file
 export OLD_NAME
 export NEW_NAME
-export SED_COMMAND
 
 echo "🔄 replacing old project name with new project name in all files..."
 find . -type f -not -path '*/\.git/*' -exec bash -c 'process_file "$0"' {} \;
