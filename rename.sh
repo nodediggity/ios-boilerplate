@@ -1,14 +1,14 @@
 #!/bin/bash
 
-# Usage: ./rename_project.sh OLD_NAME NEW_NAME
+# Usage: ./rename.sh NEW_NAME
 
-if [ "$#" -ne 2 ]; then
-  echo "Usage: $0 OLD_NAME NEW_NAME"
+if [ "$#" -ne 1 ]; then
+  echo "Usage: $0 NEW_NAME"
   exit 1
 fi
 
-OLD_NAME=$(echo "$1" | sed 's:/*$::')
-NEW_NAME=$(echo "$2" | sed 's:/*$::')
+OLD_NAME="BoilerplateApp"
+NEW_NAME=$(echo "$1" | sed 's:/*$::')
 
 SED_COMMAND="sed -i ''"
 
@@ -32,6 +32,6 @@ find . -depth -name "*${OLD_NAME}*" -not -path '*/\.git/*' -execdir bash -c 'git
 find . -name "*${OLD_NAME}*" -not -path '*/\.git/*' -exec bash -c 'git mv "$0" "${0//'"${OLD_NAME}"'/'"${NEW_NAME}"'}"' {} \;
 find . -type f -name "*''" -delete
 git add -A
-git commit -m "chore: rename project"
+git commit -m "chore: rename project from ${OLD_NAME} to ${NEW_NAME}"
 
 echo "Renaming complete."
