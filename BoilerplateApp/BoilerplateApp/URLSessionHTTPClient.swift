@@ -7,8 +7,8 @@
 
 import Foundation
 
-class URLSessionHTTPClient {
-    typealias Resource = (data: Data, response: HTTPURLResponse)
+public final class URLSessionHTTPClient {
+    public typealias Resource = (data: Data, response: HTTPURLResponse)
     private let session: URLSession
 
     public init(session: URLSession) {
