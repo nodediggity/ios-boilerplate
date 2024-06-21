@@ -16,6 +16,7 @@
 		592A5DD32C258EFE00C44EE5 /* BoilerplateAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592A5DD22C258EFE00C44EE5 /* BoilerplateAppUITestsLaunchTests.swift */; };
 		59804D8C2C25F89F001E9230 /* AppRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59804D8B2C25F89F001E9230 /* AppRouterTests.swift */; };
 		59804D8E2C25FF65001E9230 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59804D8D2C25FF65001E9230 /* AppRouter.swift */; };
+		59804D902C260151001E9230 /* XCTestCase+MemoryLeakTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59804D8F2C260151001E9230 /* XCTestCase+MemoryLeakTracking.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		59804D8A2C25F7AD001E9230 /* CI_iOS.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = CI_iOS.xctestplan; sourceTree = "<group>"; };
 		59804D8B2C25F89F001E9230 /* AppRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouterTests.swift; sourceTree = "<group>"; };
 		59804D8D2C25FF65001E9230 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
+		59804D8F2C260151001E9230 /* XCTestCase+MemoryLeakTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+MemoryLeakTracking.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,11 +102,11 @@
 		592A5DB42C258EFA00C44EE5 /* BoilerplateApp */ = {
 			isa = PBXGroup;
 			children = (
+				59804D8D2C25FF65001E9230 /* AppRouter.swift */,
 				592A5DB52C258EFA00C44EE5 /* BoilerplateAppApp.swift */,
 				592A5DB72C258EFA00C44EE5 /* ContentView.swift */,
 				592A5DB92C258EFD00C44EE5 /* Assets.xcassets */,
 				592A5DBB2C258EFD00C44EE5 /* Preview Content */,
-				59804D8D2C25FF65001E9230 /* AppRouter.swift */,
 			);
 			path = BoilerplateApp;
 			sourceTree = "<group>";
@@ -120,8 +122,9 @@
 		592A5DC52C258EFE00C44EE5 /* BoilerplateAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				592A5DC62C258EFE00C44EE5 /* BoilerplateAppTests.swift */,
 				59804D8B2C25F89F001E9230 /* AppRouterTests.swift */,
+				592A5DC62C258EFE00C44EE5 /* BoilerplateAppTests.swift */,
+				59804D8F2C260151001E9230 /* XCTestCase+MemoryLeakTracking.swift */,
 			);
 			path = BoilerplateAppTests;
 			sourceTree = "<group>";
@@ -285,6 +288,7 @@
 			files = (
 				59804D8C2C25F89F001E9230 /* AppRouterTests.swift in Sources */,
 				592A5DC72C258EFE00C44EE5 /* BoilerplateAppTests.swift in Sources */,
+				59804D902C260151001E9230 /* XCTestCase+MemoryLeakTracking.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
