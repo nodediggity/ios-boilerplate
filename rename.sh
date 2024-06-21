@@ -28,7 +28,7 @@ export OLD_NAME
 export NEW_NAME
 
 echo "🔄 replacing old project name with new project name in all files..."
-find . -type f -not -path '*/\.git/*' -exec bash -c 'process_file "{}"' \;
+find . -type f -not -path '*/\.git/*' -exec bash -c 'process_file "$1"' _ {} \;
 
 echo "🔄 staging changes..."
 git add -A
@@ -37,7 +37,7 @@ echo "🔄 renaming directories..."
 find . -depth -name "*${OLD_NAME}*" -not -path '*/\.git/*' -execdir bash -c 'git mv "$1" "${1//'"${OLD_NAME}"'/'"${NEW_NAME}"'}"' _ {} \;
 
 echo "🔄 renaming files..."
-find . -name "*${OLD_NAME}*" -not -path '*/\.git/*' -exec bash -c 'git mv "$0" "${0//'"${OLD_NAME}"'/'"${NEW_NAME}"'}"' {} \;
+find . -name "*${OLD_NAME}*" -not -path '*/\.git/*' -exec bash -c 'git mv "$1" "${1//'"${OLD_NAME}"'/'"${NEW_NAME}"'}"' _ {} \;
 
 echo "🧹 cleaning up backup files..."
 find . -type f -name "*''" -delete
