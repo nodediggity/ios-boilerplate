@@ -24,15 +24,11 @@ struct ContentView: View {
                 .padding()
         })
     }
-    
-    func route(to target: Route) {
-        router.navigate(to: target)
-    }
 }
 
-extension ContentView {
-    enum Route: Hashable {
-        case details(id: UUID)
+private extension ContentView {
+    func route(to target: Route) {
+        router.navigate(to: target)
     }
 }
 
