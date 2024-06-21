@@ -10,8 +10,6 @@ fi
 OLD_NAME="BoilerplateApp"
 NEW_NAME="${1%/}"  # Remove any trailing slashes
 
-SED_COMMAND=("sed" "-i" "")
-
 echo "🔍 old name: ${OLD_NAME}"
 echo "🔍 new name: ${NEW_NAME}"
 
@@ -21,7 +19,7 @@ process_file() {
     echo "⚙️ skipping binary file: $file"
   else
     echo "🔄 processing file: $file"
-    "${SED_COMMAND[@]}" "s/${OLD_NAME}/${NEW_NAME}/g" "$file"
+    sed -i '' "s/${OLD_NAME}/${NEW_NAME}/g" "$file"
   fi
 }
 
@@ -30,7 +28,7 @@ export OLD_NAME
 export NEW_NAME
 
 echo "🔄 replacing old project name with new project name in all files..."
-find . -type f -not -path '*/\.git/*' -exec bash -c 'process_file "$0"' {} \;
+find . -type f -not -path '*/\.git/*' -exec bash -c 'process_file "{}"' \;
 
 echo "🔄 staging changes..."
 git add -A
