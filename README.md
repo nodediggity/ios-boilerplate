@@ -13,7 +13,7 @@
 
 ---
 
-- [ ] Navigation
+- [x] Navigation
 - [ ] Networking
 - [ ] Auth
 - [ ] Unit Tests
