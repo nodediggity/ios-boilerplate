@@ -21,6 +21,7 @@
 		59804D942C261399001E9230 /* ContentView+Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59804D932C261399001E9230 /* ContentView+Route.swift */; };
 		599CE39C2C26285E0016419B /* URLSessionHTTPClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599CE39B2C26285E0016419B /* URLSessionHTTPClientTests.swift */; };
 		599CE39E2C2628810016419B /* URLProtocol+Stub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599CE39D2C2628810016419B /* URLProtocol+Stub.swift */; };
+		599CE3A02C2629CB0016419B /* URLSessionHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599CE39F2C2629CB0016419B /* URLSessionHTTPClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		59804D932C261399001E9230 /* ContentView+Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContentView+Route.swift"; sourceTree = "<group>"; };
 		599CE39B2C26285E0016419B /* URLSessionHTTPClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClientTests.swift; sourceTree = "<group>"; };
 		599CE39D2C2628810016419B /* URLProtocol+Stub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLProtocol+Stub.swift"; sourceTree = "<group>"; };
+		599CE39F2C2629CB0016419B /* URLSessionHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 				592A5DB92C258EFD00C44EE5 /* Assets.xcassets */,
 				592A5DBB2C258EFD00C44EE5 /* Preview Content */,
 				59804D932C261399001E9230 /* ContentView+Route.swift */,
+				599CE39F2C2629CB0016419B /* URLSessionHTTPClient.swift */,
 			);
 			path = BoilerplateApp;
 			sourceTree = "<group>";
@@ -293,6 +296,7 @@
 				59804D942C261399001E9230 /* ContentView+Route.swift in Sources */,
 				592A5DB62C258EFA00C44EE5 /* BoilerplateAppApp.swift in Sources */,
 				59804D8E2C25FF65001E9230 /* AppRouter.swift in Sources */,
+				599CE3A02C2629CB0016419B /* URLSessionHTTPClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
