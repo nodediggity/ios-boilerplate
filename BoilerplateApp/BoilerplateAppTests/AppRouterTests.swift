@@ -38,4 +38,14 @@ final class AppRouterTests: XCTestCase {
         
         XCTAssertEqual(sut.path, [route])
     }
+    
+    func test_navigateTo_hasNoSideEffectsOnMultipleCalls() {
+        let sut = AppRouter(with: [UUID]())
+        
+        let route = UUID()
+        sut.navigate(to: route)
+        sut.navigate(to: route)
+        
+        XCTAssertEqual(sut.path, [route, route])
+    }
 }
