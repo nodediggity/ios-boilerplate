@@ -2,7 +2,7 @@
 // Copyright (c) 2024 Benefex.
 
 import XCTest
-@testable import BoilerplateApp
+import BoilerplateApp
 
 final class URLSessionHTTPClientTests: XCTestCase {
     override func tearDown() {
