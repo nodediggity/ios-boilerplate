@@ -9,13 +9,27 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationStack {
+            NavigationLink(destination: DetailView()) {
+                Text("Show details")
+            }
+            .foregroundStyle(Color.primary)
+            .fontDesign(.rounded)
+            .font(.headline)
+            .padding()
         }
-        .padding()
+    }
+}
+
+extension ContentView {
+    struct DetailView: View {
+        var body: some View {
+            Text("<DetailView />")
+                .font(.largeTitle)
+                .padding()
+                .navigationBarTitleDisplayMode(.inline)
+                .navigationTitle("navigation details view")
+        }
     }
 }
 
