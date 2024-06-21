@@ -12,10 +12,16 @@
 
 ---
 
-```bash
-git clone https://github.com/nodediggity/ios-boilerplate.git
+```sh
+# fork it on GitHub + clone your fork
+git clone https://github.com/YOUR_USERNAME/ios-boilerplate.git
 cd ios-boilerplate
+
+# Make it your own
+chmod +x rename.sh
+./rename.sh NEW_NAME # Replace NEW_NAME with the desired name for your project
 ```
+
 
 ## Commit messages
 
