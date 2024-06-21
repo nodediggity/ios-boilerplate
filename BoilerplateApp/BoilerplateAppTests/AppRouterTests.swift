@@ -7,7 +7,7 @@
 
 import XCTest
 import SwiftUI
-@testable import BoilerplateApp
+import BoilerplateApp
 
 final class AppRouterTests: XCTestCase {
 

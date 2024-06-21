@@ -7,18 +7,18 @@
 
 import Foundation
 
-class AppRouter {
-    var path: [AnyHashable]
+public final class AppRouter {
+    public var path: [AnyHashable]
 
-    init(with path: [AnyHashable]) {
+    public init(with path: [AnyHashable]) {
         self.path = path
     }
     
-    func navigate(to destination: AnyHashable) {
+    public func navigate(to destination: AnyHashable) {
         path.append(destination)
     }
     
-    func pop() {
+    public func pop() {
         path.removeLast()
     }
 }
