@@ -44,6 +44,7 @@
 		592A5DCC2C258EFE00C44EE5 /* BoilerplateAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BoilerplateAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		592A5DD02C258EFE00C44EE5 /* BoilerplateAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoilerplateAppUITests.swift; sourceTree = "<group>"; };
 		592A5DD22C258EFE00C44EE5 /* BoilerplateAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoilerplateAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		59804D8A2C25F7AD001E9230 /* CI_iOS.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = CI_iOS.xctestplan; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +79,7 @@
 				592A5DC52C258EFE00C44EE5 /* BoilerplateAppTests */,
 				592A5DCF2C258EFE00C44EE5 /* BoilerplateAppUITests */,
 				592A5DB32C258EFA00C44EE5 /* Products */,
+				59804D892C25F787001E9230 /* XCTestPlans */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +127,14 @@
 				592A5DD22C258EFE00C44EE5 /* BoilerplateAppUITestsLaunchTests.swift */,
 			);
 			path = BoilerplateAppUITests;
+			sourceTree = "<group>";
+		};
+		59804D892C25F787001E9230 /* XCTestPlans */ = {
+			isa = PBXGroup;
+			children = (
+				59804D8A2C25F7AD001E9230 /* CI_iOS.xctestplan */,
+			);
+			path = XCTestPlans;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
