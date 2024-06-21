@@ -1,0 +1,37 @@
+{
+  "configurations" : [
+    {
+      "id" : "DB4CC215-463C-4E2E-B4BB-D8D120720041",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:BoilerplateApp.xcodeproj",
+      "identifier" : "592A5DB12C258EFA00C44EE5",
+      "name" : "BoilerplateApp"
+    },
+    "testExecutionOrdering" : "random",
+    "threadSanitizerEnabled" : true
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:BoilerplateApp.xcodeproj",
+        "identifier" : "592A5DC12C258EFE00C44EE5",
+        "name" : "BoilerplateAppTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:BoilerplateApp.xcodeproj",
+        "identifier" : "592A5DCB2C258EFE00C44EE5",
+        "name" : "BoilerplateAppUITests"
+      }
+    }
+  ],
+  "version" : 1
+}
