@@ -11,7 +11,6 @@
 		592A5DB82C258EFA00C44EE5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592A5DB72C258EFA00C44EE5 /* ContentView.swift */; };
 		592A5DBA2C258EFD00C44EE5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 592A5DB92C258EFD00C44EE5 /* Assets.xcassets */; };
 		592A5DBD2C258EFD00C44EE5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 592A5DBC2C258EFD00C44EE5 /* Preview Assets.xcassets */; };
-		592A5DC72C258EFE00C44EE5 /* BoilerplateAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592A5DC62C258EFE00C44EE5 /* BoilerplateAppTests.swift */; };
 		592A5DD12C258EFE00C44EE5 /* BoilerplateAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592A5DD02C258EFE00C44EE5 /* BoilerplateAppUITests.swift */; };
 		592A5DD32C258EFE00C44EE5 /* BoilerplateAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592A5DD22C258EFE00C44EE5 /* BoilerplateAppUITestsLaunchTests.swift */; };
 		59804D8C2C25F89F001E9230 /* AppRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59804D8B2C25F89F001E9230 /* AppRouterTests.swift */; };
@@ -53,7 +52,6 @@
 		592A5DB92C258EFD00C44EE5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		592A5DBC2C258EFD00C44EE5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		592A5DC22C258EFE00C44EE5 /* BoilerplateAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BoilerplateAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		592A5DC62C258EFE00C44EE5 /* BoilerplateAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoilerplateAppTests.swift; sourceTree = "<group>"; };
 		592A5DCC2C258EFE00C44EE5 /* BoilerplateAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BoilerplateAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		592A5DD02C258EFE00C44EE5 /* BoilerplateAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoilerplateAppUITests.swift; sourceTree = "<group>"; };
 		592A5DD22C258EFE00C44EE5 /* BoilerplateAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoilerplateAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -142,7 +140,6 @@
 		592A5DC52C258EFE00C44EE5 /* BoilerplateAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				592A5DC62C258EFE00C44EE5 /* BoilerplateAppTests.swift */,
 				599CE3AA2C262C130016419B /* App */,
 				599CE3AC2C262C320016419B /* Networking */,
 				599CE3A32C262B540016419B /* TestHelpers */,
@@ -434,7 +431,6 @@
 			files = (
 				59804D8C2C25F89F001E9230 /* AppRouterTests.swift in Sources */,
 				599CE3A52C262B740016419B /* XCTestCase+MakeError.swift in Sources */,
-				592A5DC72C258EFE00C44EE5 /* BoilerplateAppTests.swift in Sources */,
 				59804D902C260151001E9230 /* XCTestCase+MemoryLeakTracking.swift in Sources */,
 				599CE39C2C26285E0016419B /* URLSessionHTTPClientTests.swift in Sources */,
 				599CE3A72C262B950016419B /* XCTestCase+MakeURL.swift in Sources */,
