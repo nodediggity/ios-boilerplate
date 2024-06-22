@@ -60,6 +60,8 @@
 		592A5DCC2C258EFE00C44EE5 /* BoilerplateAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BoilerplateAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		592A5DD02C258EFE00C44EE5 /* BoilerplateAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoilerplateAppUITests.swift; sourceTree = "<group>"; };
 		592A5DD22C258EFE00C44EE5 /* BoilerplateAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoilerplateAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		593C13A92C27645C00BC3A32 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		593C13AA2C27646900BC3A32 /* Secrets.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Secrets.xcconfig; sourceTree = "<group>"; };
 		59804D8A2C25F7AD001E9230 /* CI_iOS.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = CI_iOS.xctestplan; sourceTree = "<group>"; };
 		59804D8B2C25F89F001E9230 /* AppRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouterTests.swift; sourceTree = "<group>"; };
 		59804D8D2C25FF65001E9230 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 			children = (
 				592A5DB92C258EFD00C44EE5 /* Assets.xcassets */,
 				599CE3AB2C262C190016419B /* App */,
+				593C13A82C27644400BC3A32 /* Config */,
 				599CE3AD2C262C3F0016419B /* Modules */,
 				592A5DBB2C258EFD00C44EE5 /* Preview Content */,
 				599CE3B02C262C5A0016419B /* Views */,
@@ -165,6 +168,15 @@
 				592A5DD22C258EFE00C44EE5 /* BoilerplateAppUITestsLaunchTests.swift */,
 			);
 			path = BoilerplateAppUITests;
+			sourceTree = "<group>";
+		};
+		593C13A82C27644400BC3A32 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				593C13A92C27645C00BC3A32 /* Config.xcconfig */,
+				593C13AA2C27646900BC3A32 /* Secrets.xcconfig */,
+			);
+			path = Config;
 			sourceTree = "<group>";
 		};
 		59804D892C25F787001E9230 /* XCTestPlans */ = {

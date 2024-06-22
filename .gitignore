@@ -32,3 +32,5 @@ iOSInjectionProject/
 BuildTools/.build
 BuildTools/.swiftpm
 .DS_Store
+**/*snapshots/failures/*
+**/Secrets.xcconfig
