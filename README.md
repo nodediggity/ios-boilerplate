@@ -15,7 +15,7 @@
 
 - [x] Navigation
 - [x] Networking
-- [ ] Auth
+- [x] Formatting
 - [ ] Unit Tests
 - [ ] Snapshot Tests
 - [ ] Acceptance Tests
