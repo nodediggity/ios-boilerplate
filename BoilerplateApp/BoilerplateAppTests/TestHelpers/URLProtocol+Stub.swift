@@ -1,5 +1,5 @@
 // URLProtocol+Stub.swift
-// Copyright (c) 2024 Benefex.
+// Created 21/06/2024.
 
 import Foundation
 

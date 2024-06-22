@@ -1,14 +1,9 @@
-//
-//  BoilerplateAppUITests.swift
-//  BoilerplateAppUITests
-//
-//  Created by Gordon on 21/06/2024.
-//
+// BoilerplateAppUITests.swift
+// Created 21/06/2024.
 
 import XCTest
 
 final class BoilerplateAppUITests: XCTestCase {
-
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
 

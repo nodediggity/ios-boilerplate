@@ -1,9 +1,5 @@
-//
-//  XCTestCase+MakeURL.swift
-//  BoilerplateAppTests
-//
-//  Created by Gordon on 21/06/2024.
-//
+// XCTestCase+MakeURL.swift
+// Created 21/06/2024.
 
 import XCTest
 

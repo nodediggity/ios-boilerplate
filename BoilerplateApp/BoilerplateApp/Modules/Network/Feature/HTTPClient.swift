@@ -1,9 +1,5 @@
-//
-//  HTTPClient.swift
-//  BoilerplateApp
-//
-//  Created by Gordon on 21/06/2024.
-//
+// HTTPClient.swift
+// Created 21/06/2024.
 
 import Foundation
 
