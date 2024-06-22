@@ -13,6 +13,10 @@
 		592A5DBD2C258EFD00C44EE5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 592A5DBC2C258EFD00C44EE5 /* Preview Assets.xcassets */; };
 		592A5DD12C258EFE00C44EE5 /* BoilerplateAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592A5DD02C258EFE00C44EE5 /* BoilerplateAppUITests.swift */; };
 		592A5DD32C258EFE00C44EE5 /* BoilerplateAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592A5DD22C258EFE00C44EE5 /* BoilerplateAppUITestsLaunchTests.swift */; };
+		593C13AD2C27657900BC3A32 /* ConfigurationMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593C13AC2C27657900BC3A32 /* ConfigurationMapper.swift */; };
+		593C13AF2C27658D00BC3A32 /* ConfigurationMapper+Values.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593C13AE2C27658D00BC3A32 /* ConfigurationMapper+Values.swift */; };
+		593C13B32C2765EE00BC3A32 /* ConfigurationMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593C13B22C2765EE00BC3A32 /* ConfigurationMapperTests.swift */; };
+		593C13B52C27661500BC3A32 /* XCTestCase+ThrownErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593C13B42C27661500BC3A32 /* XCTestCase+ThrownErrors.swift */; };
 		59804D8C2C25F89F001E9230 /* AppRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59804D8B2C25F89F001E9230 /* AppRouterTests.swift */; };
 		59804D8E2C25FF65001E9230 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59804D8D2C25FF65001E9230 /* AppRouter.swift */; };
 		59804D902C260151001E9230 /* XCTestCase+MemoryLeakTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59804D8F2C260151001E9230 /* XCTestCase+MemoryLeakTracking.swift */; };
@@ -62,6 +66,10 @@
 		592A5DD22C258EFE00C44EE5 /* BoilerplateAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoilerplateAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		593C13A92C27645C00BC3A32 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		593C13AA2C27646900BC3A32 /* Secrets.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Secrets.xcconfig; sourceTree = "<group>"; };
+		593C13AC2C27657900BC3A32 /* ConfigurationMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationMapper.swift; sourceTree = "<group>"; };
+		593C13AE2C27658D00BC3A32 /* ConfigurationMapper+Values.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ConfigurationMapper+Values.swift"; sourceTree = "<group>"; };
+		593C13B22C2765EE00BC3A32 /* ConfigurationMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationMapperTests.swift; sourceTree = "<group>"; };
+		593C13B42C27661500BC3A32 /* XCTestCase+ThrownErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+ThrownErrors.swift"; sourceTree = "<group>"; };
 		59804D8A2C25F7AD001E9230 /* CI_iOS.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = CI_iOS.xctestplan; sourceTree = "<group>"; };
 		59804D8B2C25F89F001E9230 /* AppRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouterTests.swift; sourceTree = "<group>"; };
 		59804D8D2C25FF65001E9230 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
@@ -153,6 +161,7 @@
 		592A5DC52C258EFE00C44EE5 /* BoilerplateAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				593C13B02C2765E200BC3A32 /* Config */,
 				599CE3AA2C262C130016419B /* App */,
 				599CE3AC2C262C320016419B /* Networking */,
 				599CE3A32C262B540016419B /* TestHelpers */,
@@ -175,6 +184,24 @@
 			children = (
 				593C13A92C27645C00BC3A32 /* Config.xcconfig */,
 				593C13AA2C27646900BC3A32 /* Secrets.xcconfig */,
+				593C13AB2C27657100BC3A32 /* Mapper */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		593C13AB2C27657100BC3A32 /* Mapper */ = {
+			isa = PBXGroup;
+			children = (
+				593C13AC2C27657900BC3A32 /* ConfigurationMapper.swift */,
+				593C13AE2C27658D00BC3A32 /* ConfigurationMapper+Values.swift */,
+			);
+			path = Mapper;
+			sourceTree = "<group>";
+		};
+		593C13B02C2765E200BC3A32 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				593C13B22C2765EE00BC3A32 /* ConfigurationMapperTests.swift */,
 			);
 			path = Config;
 			sourceTree = "<group>";
@@ -198,6 +225,7 @@
 				599CE3A62C262B950016419B /* XCTestCase+MakeURL.swift */,
 				59804D8F2C260151001E9230 /* XCTestCase+MemoryLeakTracking.swift */,
 				59A251EE2C275BBC0013CDB1 /* XCTestCase+Snapshot.swift */,
+				593C13B42C27661500BC3A32 /* XCTestCase+ThrownErrors.swift */,
 			);
 			path = TestHelpers;
 			sourceTree = "<group>";
@@ -466,11 +494,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				593C13AF2C27658D00BC3A32 /* ConfigurationMapper+Values.swift in Sources */,
 				592A5DB82C258EFA00C44EE5 /* ContentView.swift in Sources */,
 				59804D922C2603EB001E9230 /* DetailsView.swift in Sources */,
 				599CE3B52C262CCA0016419B /* HTTPClient.swift in Sources */,
 				599CE3A22C262ACB0016419B /* AppDependencies.swift in Sources */,
 				59804D942C261399001E9230 /* ContentView+Route.swift in Sources */,
+				593C13AD2C27657900BC3A32 /* ConfigurationMapper.swift in Sources */,
 				592A5DB62C258EFA00C44EE5 /* BoilerplateAppApp.swift in Sources */,
 				59804D8E2C25FF65001E9230 /* AppRouter.swift in Sources */,
 				599CE3A02C2629CB0016419B /* URLSessionHTTPClient.swift in Sources */,
@@ -488,8 +518,10 @@
 				59804D902C260151001E9230 /* XCTestCase+MemoryLeakTracking.swift in Sources */,
 				599CE39C2C26285E0016419B /* URLSessionHTTPClientTests.swift in Sources */,
 				59A251F12C275BED0013CDB1 /* UIViewController+Snapshot.swift in Sources */,
+				593C13B52C27661500BC3A32 /* XCTestCase+ThrownErrors.swift in Sources */,
 				599CE3A72C262B950016419B /* XCTestCase+MakeURL.swift in Sources */,
 				599CE3A92C262BB40016419B /* XCTestCase+MakeData.swift in Sources */,
+				593C13B32C2765EE00BC3A32 /* ConfigurationMapperTests.swift in Sources */,
 				599CE39E2C2628810016419B /* URLProtocol+Stub.swift in Sources */,
 				59A251F62C275EC70013CDB1 /* Router+Stub.swift in Sources */,
 			);
