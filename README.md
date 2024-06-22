@@ -1,5 +1,7 @@
 # ios-boilerplate
 
+![ci workflow](https://github.com/nodediggity/ios-boilerplate/actions/workflows/CI-iOS.yml/badge.svg)
+
 ## About
 
 ---
