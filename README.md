@@ -16,11 +16,11 @@
 - [x] Navigation
 - [x] Networking
 - [x] Formatting
-- [ ] Unit Tests
-- [ ] Snapshot Tests
+- [x] Unit Tests
+- [x] Snapshot Tests
 - [ ] Acceptance Tests
 - [ ] Dev/Release Environment
-- [ ] CI/CD
+- [x] CI/CD
 - [ ] AppStore
 
 
