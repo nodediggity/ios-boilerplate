@@ -16,14 +16,14 @@ help:
 	
 .PHONY: test
 test:
-	xcodebuild -project $(XCODEPROJ) -scheme $(SCHEME) -sdk iphonesimulator -destination 'platform=iOS Simulator,name=$(DEVICE),OS=$(OS_VERSION)' clean build test
-
+	xcodebuild -project $(XCODEPROJ) -scheme $(SCHEME) -sdk iphonesimulator -destination 'platform=iOS Simulator,name=$(DEVICE),OS=$(OS_VERSION)' OTHER_SWIFT_FLAGS="-D SKIP_FORMAT" clean build test
 .PHONY: build
 build:
-	xcodebuild -project $(XCODEPROJ) -scheme $(SCHEME) -sdk iphonesimulator -destination 'platform=iOS Simulator,name=$(DEVICE),OS=$(OS_VERSION)' clean build
+	xcodebuild -project $(XCODEPROJ) -scheme $(SCHEME) -sdk iphonesimulator -destination 'platform=iOS Simulator,name=$(DEVICE),OS=$(OS_VERSION)' OTHER_SWIFT_FLAGS="-D SKIP_FORMAT" clean build
 
 .PHONY: clean
 clean:
 	xcodebuild -project $(XCODEPROJ) -scheme $(SCHEME) clean
 
 .DEFAULT_GOAL := help
+
