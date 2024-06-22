@@ -70,6 +70,7 @@
 		593C13AE2C27658D00BC3A32 /* ConfigurationMapper+Values.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ConfigurationMapper+Values.swift"; sourceTree = "<group>"; };
 		593C13B22C2765EE00BC3A32 /* ConfigurationMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationMapperTests.swift; sourceTree = "<group>"; };
 		593C13B42C27661500BC3A32 /* XCTestCase+ThrownErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+ThrownErrors.swift"; sourceTree = "<group>"; };
+		593C13B62C27669900BC3A32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		59804D8A2C25F7AD001E9230 /* CI_iOS.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = CI_iOS.xctestplan; sourceTree = "<group>"; };
 		59804D8B2C25F89F001E9230 /* AppRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouterTests.swift; sourceTree = "<group>"; };
 		59804D8D2C25FF65001E9230 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
@@ -140,6 +141,7 @@
 		592A5DB42C258EFA00C44EE5 /* BoilerplateApp */ = {
 			isa = PBXGroup;
 			children = (
+				593C13B62C27669900BC3A32 /* Info.plist */,
 				592A5DB92C258EFD00C44EE5 /* Assets.xcassets */,
 				599CE3AB2C262C190016419B /* App */,
 				593C13A82C27644400BC3A32 /* Config */,
@@ -681,6 +683,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"BoilerplateApp/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BoilerplateApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -709,6 +712,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"BoilerplateApp/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BoilerplateApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
