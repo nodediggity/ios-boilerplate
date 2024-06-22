@@ -1,9 +1,5 @@
-//
-//  URLSessionHTTPClient.swift
-//  BoilerplateApp
-//
-//  Created by Gordon on 21/06/2024.
-//
+// URLSessionHTTPClient.swift
+// Created 21/06/2024.
 
 import Foundation
 

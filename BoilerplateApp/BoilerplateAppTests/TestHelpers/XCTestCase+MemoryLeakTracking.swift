@@ -1,9 +1,5 @@
-//
-//  XCTestCase+MemoryLeakTracking.swift
-//  BoilerplateAppTests
-//
-//  Created by Gordon on 21/06/2024.
-//
+// XCTestCase+MemoryLeakTracking.swift
+// Created 21/06/2024.
 
 import XCTest
 

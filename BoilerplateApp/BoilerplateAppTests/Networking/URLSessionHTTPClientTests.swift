@@ -1,8 +1,8 @@
 // URLSessionHTTPClientTests.swift
-// Copyright (c) 2024 Benefex.
+// Created 21/06/2024.
 
-import XCTest
 import BoilerplateApp
+import XCTest
 
 final class URLSessionHTTPClientTests: XCTestCase {
     override func tearDown() {
@@ -46,7 +46,7 @@ final class URLSessionHTTPClientTests: XCTestCase {
             resultErrorFor(data: data, response: nonHTTPURLResponse, error: nil)
         ]
 
-        requests.enumerated().forEach { index, element in
+        for (index, element) in requests.enumerated() {
             XCTAssertNotNil(element, "Expected error for item at \(index) but got nil instead")
         }
     }

@@ -1,9 +1,5 @@
-//
-//  ContentView+Route.swift
-//  BoilerplateApp
-//
-//  Created by Gordon on 21/06/2024.
-//
+// ContentView+Route.swift
+// Created 21/06/2024.
 
 import SwiftUI
 

@@ -1,9 +1,5 @@
-//
-//  AppRouter.swift
-//  BoilerplateApp
-//
-//  Created by Gordon on 21/06/2024.
-//
+// AppRouter.swift
+// Created 21/06/2024.
 
 import Foundation
 import SwiftUI
@@ -21,11 +17,11 @@ public final class AppRouter: Router {
     public init(with path: NavigationPath = NavigationPath()) {
         self.path = path
     }
-    
+
     public func navigate(to destination: any Hashable) {
         path.append(destination)
     }
-    
+
     public func pop() {
         path.removeLast()
     }

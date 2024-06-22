@@ -1,14 +1,9 @@
-//
-//  BoilerplateAppUITestsLaunchTests.swift
-//  BoilerplateAppUITests
-//
-//  Created by Gordon on 21/06/2024.
-//
+// BoilerplateAppUITestsLaunchTests.swift
+// Created 21/06/2024.
 
 import XCTest
 
 final class BoilerplateAppUITestsLaunchTests: XCTestCase {
-
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true
     }
