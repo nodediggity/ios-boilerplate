@@ -1,3 +1,4 @@
 #include "Secrets.xcconfig"
 
-APP_NAME = BoilerplateApp
+APP_DISPLAY_NAME = BoilerplateApp
+APP_ICON_NAME = AppIcon

@@ -4,5 +4,9 @@
 <dict>
 	<key>SECRET_KEY</key>
 	<string>$(SECRET_KEY)</string>
+    <key>APP_ICON_NAME</key>
+    <string>$(APP_ICON_NAME)</string>
+    <key>APP_DISPLAY_NAME</key>
+    <string>$(APP_DISPLAY_NAME)</string>
 </dict>
 </plist>
