@@ -69,3 +69,10 @@ More Examples:
 - `refactor`: (refactoring production code, eg. renaming a variable)
 - `test`: (adding missing tests, refactoring tests; no production code change)
 - `chore`: (updating grunt tasks etc; no production code change)
+
+
+## Code and Linting
+
+---
+
+[SwiftFormat](https://github.com/nicklockwood/SwiftFormat) executes on builds ensuring consistently formatted code.
