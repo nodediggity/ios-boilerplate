@@ -1,0 +1,3 @@
+#include "Secrets.xcconfig"
+
+APP_NAME = BoilerplateApp
