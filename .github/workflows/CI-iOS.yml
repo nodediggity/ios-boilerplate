@@ -12,5 +12,12 @@ jobs:
       run: sudo xcode-select -switch /Applications/Xcode_15.4.app
     - name: Xcode version
       run: /usr/bin/xcodebuild -version
+
+    - name: Create Secrets.xcconfig
+      env:
+        SECRETS_XCCONFIG: ${{ secrets.SECRETS_XCCONFIG }}
+      run: |
+        echo "$SECRETS_XCCONFIG" | base64 --decode > BoilerplateApp/BoilerplateApp/Config/Secrets.xcconfig
+
     - name: Build and Test
       run: make test
