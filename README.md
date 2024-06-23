@@ -20,10 +20,48 @@
 - [x] Formatting
 - [x] Unit Tests
 - [x] Snapshot Tests
-- [ ] Acceptance Tests
-- [ ] Dev/Release Environment
+- [ ] UI Tests
+- [ ] Localisation
+- [x] Dev/Release Environment
 - [x] CI/CD
 - [ ] AppStore
+
+
+## Dependencies
+
+---
+
+- Xcode 15.4.0
+- Swift 5
+- Minimum iOS version 17.5
+
+
+## Environment Variables
+
+---
+
+### Config
+
+Environment variables should be added [here](/BoilerplateApp/BoilerplateApp/Config/Config.xcconfig) for debug and release builds.
+
+- `APP_DISPLAY_NAME`
+- `APP_ICON_NAME`
+
+### Secrets
+
+Secrets are injected during the build process within the CI pipeline.
+
+When running the project locally a copy of the secrets file should be configured [here](/BoilerplateApp/BoilerplateApp/Config/Config/Secrets.xcconfig).
+
+- `MY_SECRET_VALUE`
+
+The `Secrets.xcconfig` file is excluded from source control - updates should be base64 encoded and replace the CI environment variable.
+
+This can be encoded using the openssl base64 command.
+
+```
+$ openssl base64 -in Secrets.xcconfig | tr -d "\n" | pbcopy;
+```
 
 
 ## Getting started
