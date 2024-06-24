@@ -22,6 +22,7 @@
 - [x] Unit Tests
 - [x] Snapshot Tests
 - [ ] UI Tests
+- [x] Accessibility
 - [x] Dev/Release Environment
 - [x] CI/CD
 - [ ] AppStore
