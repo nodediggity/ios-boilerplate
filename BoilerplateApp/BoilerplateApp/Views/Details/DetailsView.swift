@@ -15,6 +15,10 @@ struct DetailsView: View {
             .font(.largeTitle)
             .padding()
             .navigationBarTitleDisplayMode(.inline)
+            .accessibilityLabel("DETAILS_USER_ID_ACC_LABEL")
+            .accessibilityValue(id.uuidString)
+            .accessibilityHint("DETAILS_USER_ID_DESC")
+            .accessibilityIdentifier("DETAILS_USER_ID_TEXT")
     }
 }
 

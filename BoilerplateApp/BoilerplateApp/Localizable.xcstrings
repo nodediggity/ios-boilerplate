@@ -13,6 +13,30 @@
         }
       }
     },
+    "DETAILS_USER_ID_ACC_LABEL" : {
+      "comment" : "Text for the user ID",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "User ID"
+          }
+        }
+      }
+    },
+    "DETAILS_USER_ID_DESC" : {
+      "comment" : "Accessibility Hint for a User ID label",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Displays the unique identifier for a user"
+          }
+        }
+      }
+    },
     "HOME_NAV_LINK" : {
       "comment" : "Link text for the content view",
       "extractionState" : "manual",
@@ -26,7 +50,7 @@
       }
     },
     "HOME_NAV_LINK_DESC" : {
-      "comment" : "Link text hint for the content view",
+      "comment" : "Accessibility Hint for the 'show details' button",
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
