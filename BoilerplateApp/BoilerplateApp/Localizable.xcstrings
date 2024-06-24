@@ -1,0 +1,30 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "DETAILS_USER_ID %@" : {
+      "comment" : "Details of the user ID",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This is your user ID %@"
+          }
+        }
+      }
+    },
+    "HOME_NAV_LINK" : {
+      "comment" : "Link text for the content view",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Show details"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

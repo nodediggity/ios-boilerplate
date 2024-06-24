@@ -12,7 +12,7 @@ struct ContentView: View {
 
     var body: some View {
         Button(action: { route(to: .details(id: UUID())) }, label: {
-            Text("Show details")
+            Text("HOME_NAV_LINK")
                 .foregroundStyle(Color.primary)
                 .fontDesign(.rounded)
                 .font(.headline)

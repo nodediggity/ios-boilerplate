@@ -22,6 +22,8 @@
 		59804D902C260151001E9230 /* XCTestCase+MemoryLeakTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59804D8F2C260151001E9230 /* XCTestCase+MemoryLeakTracking.swift */; };
 		59804D922C2603EB001E9230 /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59804D912C2603EB001E9230 /* DetailsView.swift */; };
 		59804D942C261399001E9230 /* ContentView+Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59804D932C261399001E9230 /* ContentView+Route.swift */; };
+		598B565A2C2975E2005ECB01 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 598B56592C2975E2005ECB01 /* Localizable.xcstrings */; };
+		598B565C2C297CA8005ECB01 /* LocalizationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598B565B2C297CA8005ECB01 /* LocalizationTests.swift */; };
 		599CE39C2C26285E0016419B /* URLSessionHTTPClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599CE39B2C26285E0016419B /* URLSessionHTTPClientTests.swift */; };
 		599CE39E2C2628810016419B /* URLProtocol+Stub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599CE39D2C2628810016419B /* URLProtocol+Stub.swift */; };
 		599CE3A02C2629CB0016419B /* URLSessionHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599CE39F2C2629CB0016419B /* URLSessionHTTPClient.swift */; };
@@ -77,6 +79,8 @@
 		59804D8F2C260151001E9230 /* XCTestCase+MemoryLeakTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+MemoryLeakTracking.swift"; sourceTree = "<group>"; };
 		59804D912C2603EB001E9230 /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
 		59804D932C261399001E9230 /* ContentView+Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContentView+Route.swift"; sourceTree = "<group>"; };
+		598B56592C2975E2005ECB01 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		598B565B2C297CA8005ECB01 /* LocalizationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationTests.swift; sourceTree = "<group>"; };
 		599CE39B2C26285E0016419B /* URLSessionHTTPClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClientTests.swift; sourceTree = "<group>"; };
 		599CE39D2C2628810016419B /* URLProtocol+Stub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLProtocol+Stub.swift"; sourceTree = "<group>"; };
 		599CE39F2C2629CB0016419B /* URLSessionHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClient.swift; sourceTree = "<group>"; };
@@ -143,6 +147,7 @@
 			children = (
 				593C13B62C27669900BC3A32 /* Info.plist */,
 				592A5DB92C258EFD00C44EE5 /* Assets.xcassets */,
+				598B56592C2975E2005ECB01 /* Localizable.xcstrings */,
 				599CE3AB2C262C190016419B /* App */,
 				593C13A82C27644400BC3A32 /* Config */,
 				599CE3AD2C262C3F0016419B /* Modules */,
@@ -163,8 +168,8 @@
 		592A5DC52C258EFE00C44EE5 /* BoilerplateAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				593C13B02C2765E200BC3A32 /* Config */,
 				599CE3AA2C262C130016419B /* App */,
+				593C13B02C2765E200BC3A32 /* Config */,
 				599CE3AC2C262C320016419B /* Networking */,
 				599CE3A32C262B540016419B /* TestHelpers */,
 				59A251EA2C275B550013CDB1 /* Views */,
@@ -236,6 +241,7 @@
 			isa = PBXGroup;
 			children = (
 				59804D8B2C25F89F001E9230 /* AppRouterTests.swift */,
+				598B565B2C297CA8005ECB01 /* LocalizationTests.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -449,6 +455,7 @@
 			files = (
 				592A5DBD2C258EFD00C44EE5 /* Preview Assets.xcassets in Resources */,
 				592A5DBA2C258EFD00C44EE5 /* Assets.xcassets in Resources */,
+				598B565A2C2975E2005ECB01 /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -524,6 +531,7 @@
 				599CE3A72C262B950016419B /* XCTestCase+MakeURL.swift in Sources */,
 				599CE3A92C262BB40016419B /* XCTestCase+MakeData.swift in Sources */,
 				593C13B32C2765EE00BC3A32 /* ConfigurationMapperTests.swift in Sources */,
+				598B565C2C297CA8005ECB01 /* LocalizationTests.swift in Sources */,
 				599CE39E2C2628810016419B /* URLProtocol+Stub.swift in Sources */,
 				59A251F62C275EC70013CDB1 /* Router+Stub.swift in Sources */,
 			);
