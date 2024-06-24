@@ -11,7 +11,7 @@ struct DetailsView: View {
     }
 
     var body: some View {
-        Text("\(id.uuidString)")
+        Text("DETAILS_USER_ID \(id.uuidString)")
             .font(.largeTitle)
             .padding()
             .navigationBarTitleDisplayMode(.inline)
