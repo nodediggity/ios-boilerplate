@@ -18,10 +18,10 @@
 - [x] Navigation
 - [x] Networking
 - [x] Formatting
+- [x] Localisation
 - [x] Unit Tests
 - [x] Snapshot Tests
 - [ ] UI Tests
-- [ ] Localisation
 - [x] Dev/Release Environment
 - [x] CI/CD
 - [ ] AppStore
