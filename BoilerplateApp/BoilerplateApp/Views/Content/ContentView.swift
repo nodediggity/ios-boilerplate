@@ -17,7 +17,10 @@ struct ContentView: View {
                 .fontDesign(.rounded)
                 .font(.headline)
                 .padding()
+                .accessibilityLabel("HOME_NAV_LINK")
+                .accessibilityHint("HOME_NAV_LINK_DESC")
         })
+        .accessibilityIdentifier("SHOW_DETAILS_BUTTON")
     }
 }
 

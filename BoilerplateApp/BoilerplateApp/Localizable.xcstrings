@@ -24,6 +24,18 @@
           }
         }
       }
+    },
+    "HOME_NAV_LINK_DESC" : {
+      "comment" : "Link text hint for the content view",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Navigates to the details screen"
+          }
+        }
+      }
     }
   },
   "version" : "1.0"
