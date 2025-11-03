@@ -1,17 +1,17 @@
 FASTLANE := bundle exec fastlane
 XCODEPROJ := BoilerplateApp/BoilerplateApp.xcodeproj
 SCHEME := CI_iOS
-DEVICE := iPhone 15 Pro
-OS_VERSION := 17.5
+DEVICE := iPhone 17 Pro
+OS_VERSION := 26.0.1
 
 # Targets
 .PHONY: help
 help:
 	@echo "Available tasks:"
-	@echo "  🎯 make test           # 🧪 Run unit tests on the $(DEVICE) simulator with iOS $(OS_VERSION)"
-	@echo "  🛠️ make build          # 🔨 Build the project for the $(DEVICE) simulator with iOS $(OS_VERSION)"
-	@echo "  🧹 make clean          # 🧼 Clean the project"
-	@echo "  ℹ️ make help           # 📋 Display this help message"
+	@echo "  make test           # Run unit tests on the $(DEVICE) simulator with iOS $(OS_VERSION)"
+	@echo "  make build          # Build the project for the $(DEVICE) simulator with iOS $(OS_VERSION)"
+	@echo "  make clean          # Clean the project"
+	@echo "  make help           # Display this help message"
 	@echo ""
 	
 .PHONY: test

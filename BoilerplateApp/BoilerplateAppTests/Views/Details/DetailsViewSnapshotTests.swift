@@ -8,7 +8,7 @@ import XCTest
 final class DetailsViewSnapshotTests: XCTestCase {
     func test_loaded() {
         let sut = makeSUT()
-        assert(snapshot: sut.snapshot(for: .iPhone15Pro(style: .light)), named: "DETAILS_VIEW_LOADED_light")
+        assert(snapshot: sut.snapshot(for: .iPhone17Pro(style: .light)), named: "DETAILS_VIEW_LOADED_light")
     }
 }
 

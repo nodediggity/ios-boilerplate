@@ -7,7 +7,7 @@ import SwiftUI
 struct BoilerplateAppApp: App {
     @State private var router = AppRouter()
     @State private var dependencies = AppDependencies()
-
+    
     var body: some Scene {
         WindowGroup {
             NavigationStack(path: $router.path, root: {
