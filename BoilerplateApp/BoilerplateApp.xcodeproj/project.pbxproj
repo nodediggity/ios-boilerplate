@@ -68,7 +68,6 @@
 		592A5DD02C258EFE00C44EE5 /* BoilerplateAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoilerplateAppUITests.swift; sourceTree = "<group>"; };
 		592A5DD22C258EFE00C44EE5 /* BoilerplateAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoilerplateAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		593C13A92C27645C00BC3A32 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
-		593C13AA2C27646900BC3A32 /* Secrets.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Secrets.xcconfig; sourceTree = "<group>"; };
 		593C13AC2C27657900BC3A32 /* ConfigurationMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationMapper.swift; sourceTree = "<group>"; };
 		593C13AE2C27658D00BC3A32 /* ConfigurationMapper+Values.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ConfigurationMapper+Values.swift"; sourceTree = "<group>"; };
 		593C13B22C2765EE00BC3A32 /* ConfigurationMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationMapperTests.swift; sourceTree = "<group>"; };
@@ -96,6 +95,7 @@
 		59A251F02C275BED0013CDB1 /* UIViewController+Snapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Snapshot.swift"; sourceTree = "<group>"; };
 		59A251F22C275E980013CDB1 /* CONTENT_VIEW_LOADED_light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CONTENT_VIEW_LOADED_light.png; sourceTree = "<group>"; };
 		59A251F52C275EC70013CDB1 /* Router+Stub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Router+Stub.swift"; sourceTree = "<group>"; };
+		6A88858F2EB87FBC00164CAB /* Secrets.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Secrets.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,8 +192,8 @@
 			isa = PBXGroup;
 			children = (
 				593C13A92C27645C00BC3A32 /* Config.xcconfig */,
-				593C13AA2C27646900BC3A32 /* Secrets.xcconfig */,
 				593C13AB2C27657100BC3A32 /* Mapper */,
+				6A88858F2EB87FBC00164CAB /* Secrets.xcconfig */,
 			);
 			path = Config;
 			sourceTree = "<group>";
@@ -424,7 +424,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1540;
-				LastUpgradeCheck = 1540;
+				LastUpgradeCheck = 2600;
 				TargetAttributes = {
 					592A5DB12C258EFA00C44EE5 = {
 						CreatedOnToolsVersion = 15.4;
@@ -633,6 +633,7 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -690,6 +691,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -758,7 +760,6 @@
 		592A5DDA2C258EFE00C44EE5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -777,7 +778,6 @@
 		592A5DDB2C258EFE00C44EE5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -796,7 +796,6 @@
 		592A5DDD2C258EFE00C44EE5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -813,7 +812,6 @@
 		592A5DDE2C258EFE00C44EE5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
