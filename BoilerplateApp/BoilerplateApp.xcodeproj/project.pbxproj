@@ -101,7 +101,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 592A5DD62C258EFE00C44EE5 /* Build configuration list for PBXNativeTarget "BoilerplateApp" */;
 			buildPhases = (
-				5906F4C02C26A0BA005DDAB3 /* Swiftfomat */,
 				592A5DAE2C258EFA00C44EE5 /* Sources */,
 				592A5DAF2C258EFA00C44EE5 /* Frameworks */,
 				592A5DB02C258EFA00C44EE5 /* Resources */,
@@ -226,28 +225,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		5906F4C02C26A0BA005DDAB3 /* Swiftfomat */ = {
-			isa = PBXShellScriptBuildPhase;
-			alwaysOutOfDate = 1;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = Swiftfomat;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "if [ \"${ENABLE_PREVIEWS}\" = \"YES\" ]; then\n    exit 0;\nfi\n\nif [[ $OTHER_SWIFT_FLAGS == *\"-D SKIP_FORMAT\"* ]]; then\n  exit 0;\nfi\n\ncd ../BuildTools\nSDKROOT=(xcrun --sdk macosx --show-sdk-path)\nswift run -c release swiftformat \"$SRCROOT\" --config ../.swiftformat --swiftversion 5.8.1\n\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		592A5DAE2C258EFA00C44EE5 /* Sources */ = {
