@@ -41,7 +41,7 @@ final class ConfigurationMapperTests: XCTestCase {
 }
 
 private extension ConfigurationMapperTests {
-    class MockBundle: Bundle {
+    class MockBundle: Bundle, @unchecked Sendable {
         var values: [String: Any] = [:]
         override func object(forInfoDictionaryKey key: String) -> Any? {
             if let value = values[key] {
@@ -53,7 +53,7 @@ private extension ConfigurationMapperTests {
     }
 }
 
-extension ConfigurationMapper.Error: Equatable {
+extension ConfigurationMapper.Error: @retroactive Equatable {
     public static func == (lhs: ConfigurationMapper.Error, rhs: ConfigurationMapper.Error) -> Bool {
         switch (lhs, rhs) {
         case let (.missingKey(lhsKey), .missingKey(rhsKey)):
