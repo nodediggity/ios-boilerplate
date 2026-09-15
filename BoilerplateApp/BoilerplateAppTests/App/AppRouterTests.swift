@@ -3,13 +3,32 @@
 
 import BoilerplateApp
 import SwiftUI
+import Testing
 import XCTest
 
-final class AppRouterTests: XCTestCase {
-    func test_init_hasNoSideEffects() {
-        let sut = makeSUT()
-        XCTAssertTrue(sut.path.isEmpty)
+@Suite("App Router")
+struct AppRouterTests {
+    
+    @Test("Does not update path on init")
+    func initHasNoSideEffects() {
+        let fixtures = TestFixtures()
+        
+        let emptyPath = NavigationPath()
+        let sut = fixtures.makeSUT(path: emptyPath)
+        
+        #expect(sut.path.isEmpty)
     }
+}
+
+extension AppRouterTests {
+    final class TestFixtures {
+        func makeSUT(path: NavigationPath = .init()) -> AppRouter {
+            AppRouter(with: path)
+        }
+    }
+}
+
+final class AppRouterXCTestCases: XCTestCase {
 
     func test_navigateTo_appendsRouteToPath() {
         let sut = makeSUT()
@@ -44,7 +63,7 @@ final class AppRouterTests: XCTestCase {
     }
 }
 
-private extension AppRouterTests {
+private extension AppRouterXCTestCases {
     func makeSUT(path: NavigationPath = .init(), file: StaticString = #filePath, line: UInt = #line) -> AppRouter {
         let sut = AppRouter(with: path)
         trackForMemoryLeaks(sut, file: file, line: line)
