@@ -55,8 +55,15 @@ struct AppRouterTests {
 
 extension AppRouterTests {
     final class TestFixtures {
-        func makeSUT(path: NavigationPath = .init()) -> AppRouter {
-            AppRouter(with: path)
+        
+        private var sutTracker: MemoryLeakTracker<AppRouter>?
+        
+        deinit { sutTracker?.verify() }
+        
+        func makeSUT(path: NavigationPath = .init(), sourceLocation: SourceLocation = #_sourceLocation) -> AppRouter {
+            let sut = AppRouter(with: path)
+            sutTracker = .init(instance: sut, sourceLocation: sourceLocation)
+            return sut
         }
     }
 }
