@@ -29,6 +29,17 @@ struct AppRouterTests {
 
         #expect(sut.path.count == 1)
     }
+    
+    @Test("Navigate action updates path on multiple actions")
+    func noSideEffectsOnMultipleActions() {
+        let fixtures = TestFixtures()
+        let sut = fixtures.makeSUT()
+        
+        sut.navigate(to: UUID())
+        sut.navigate(to: UUID())
+
+        #expect(sut.path.count == 2)
+    }
 }
 
 extension AppRouterTests {
@@ -40,16 +51,6 @@ extension AppRouterTests {
 }
 
 final class AppRouterXCTestCases: XCTestCase {
-
-    func test_navigateTo_hasNoSideEffectsOnMultipleCalls() {
-        let sut = makeSUT()
-
-        let route = UUID()
-        sut.navigate(to: route)
-        sut.navigate(to: route)
-
-        XCTAssertEqual(sut.path.count, 2)
-    }
 
     func test_pop_removesTopItemInStack() {
         let sut = makeSUT()
