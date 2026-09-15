@@ -18,6 +18,17 @@ struct AppRouterTests {
         
         #expect(sut.path.isEmpty)
     }
+    
+    @Test("Navigate action updates path")
+    func navigateAppendsRouteToPath() {
+        let fixtures = TestFixtures()
+        let sut = fixtures.makeSUT()
+        
+        let path = UUID()
+        sut.navigate(to: path)
+
+        #expect(sut.path.count == 1)
+    }
 }
 
 extension AppRouterTests {
@@ -29,15 +40,6 @@ extension AppRouterTests {
 }
 
 final class AppRouterXCTestCases: XCTestCase {
-
-    func test_navigateTo_appendsRouteToPath() {
-        let sut = makeSUT()
-
-        let route = UUID()
-        sut.navigate(to: route)
-
-        XCTAssertEqual(sut.path.count, 1)
-    }
 
     func test_navigateTo_hasNoSideEffectsOnMultipleCalls() {
         let sut = makeSUT()
