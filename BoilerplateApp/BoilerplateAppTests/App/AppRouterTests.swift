@@ -40,6 +40,17 @@ struct AppRouterTests {
 
         #expect(sut.path.count == 2)
     }
+    
+    @Test("Pop action drops item from stacvk")
+    func removesItemInStack() {
+        let fixtures = TestFixtures()
+        let sut = fixtures.makeSUT()
+        
+        sut.navigate(to: UUID())
+        sut.pop()
+        
+        #expect(sut.path.isEmpty)
+    }
 }
 
 extension AppRouterTests {
@@ -47,29 +58,5 @@ extension AppRouterTests {
         func makeSUT(path: NavigationPath = .init()) -> AppRouter {
             AppRouter(with: path)
         }
-    }
-}
-
-final class AppRouterXCTestCases: XCTestCase {
-
-    func test_pop_removesTopItemInStack() {
-        let sut = makeSUT()
-
-        let route = UUID()
-        sut.navigate(to: route)
-
-        XCTAssertEqual(sut.path.count, 1)
-
-        sut.pop()
-
-        XCTAssertTrue(sut.path.isEmpty)
-    }
-}
-
-private extension AppRouterXCTestCases {
-    func makeSUT(path: NavigationPath = .init(), file: StaticString = #filePath, line: UInt = #line) -> AppRouter {
-        let sut = AppRouter(with: path)
-        trackForMemoryLeaks(sut, file: file, line: line)
-        return sut
     }
 }
