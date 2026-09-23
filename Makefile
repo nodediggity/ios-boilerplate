@@ -1,8 +1,8 @@
 FASTLANE := bundle exec fastlane
 XCODEPROJ := BoilerplateApp/BoilerplateApp.xcodeproj
 SCHEME := CI_iOS
-DEVICE := iPhone 17 Pro
-OS_VERSION := 26.0.1
+DEVICE := iPhone 17
+OS_VERSION := 27.0
 
 # Targets
 .PHONY: help
