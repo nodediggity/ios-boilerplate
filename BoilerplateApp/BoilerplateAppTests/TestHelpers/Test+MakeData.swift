@@ -9,12 +9,12 @@ import Foundation
 import Testing
 
 extension Test {
-    static func makeData<T: Encodable>(obj: T? = .none) -> Data {
-        guard let obj else { return Data() }
-        return try! JSONEncoder().encode(obj)
+    static func makeData(str: String? = .none) -> Data {
+        guard let str else { return Data() }
+        return Data(str.utf8)
     }
     
-    func makeData<T: Encodable>(obj: T? = .none) -> Data {
-        Test.makeData(obj: obj)
+    func makeData(str: String? = .none) -> Data {
+        Test.makeData(str: str)
     }
 }
