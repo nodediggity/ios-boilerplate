@@ -32,9 +32,9 @@
 
 ---
 
-- Xcode 15.4.0
+- Xcode 26.6
 - Swift 5
-- Minimum iOS version 17.5
+- Minimum iOS version 18.6
 
 
 ## Environment Variables

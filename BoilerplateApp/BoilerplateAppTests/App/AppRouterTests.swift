@@ -3,51 +3,67 @@
 
 import BoilerplateApp
 import SwiftUI
+import Testing
 import XCTest
 
-final class AppRouterTests: XCTestCase {
-    func test_init_hasNoSideEffects() {
-        let sut = makeSUT()
-        XCTAssertTrue(sut.path.isEmpty)
+@Suite("App Router")
+struct AppRouterTests {
+    
+    @Test("Does not update path on init")
+    func initHasNoSideEffects() {
+        let fixtures = TestFixtures()
+        
+        let emptyPath = NavigationPath()
+        let sut = fixtures.makeSUT(path: emptyPath)
+        
+        #expect(sut.path.isEmpty)
     }
+    
+    @Test("Navigate action updates path")
+    func navigateAppendsRouteToPath() {
+        let fixtures = TestFixtures()
+        let sut = fixtures.makeSUT()
+        
+        let path = UUID()
+        sut.navigate(to: path)
 
-    func test_navigateTo_appendsRouteToPath() {
-        let sut = makeSUT()
-
-        let route = UUID()
-        sut.navigate(to: route)
-
-        XCTAssertEqual(sut.path.count, 1)
+        #expect(sut.path.count == 1)
     }
+    
+    @Test("Navigate action updates path on multiple actions")
+    func noSideEffectsOnMultipleActions() {
+        let fixtures = TestFixtures()
+        let sut = fixtures.makeSUT()
+        
+        sut.navigate(to: UUID())
+        sut.navigate(to: UUID())
 
-    func test_navigateTo_hasNoSideEffectsOnMultipleCalls() {
-        let sut = makeSUT()
-
-        let route = UUID()
-        sut.navigate(to: route)
-        sut.navigate(to: route)
-
-        XCTAssertEqual(sut.path.count, 2)
+        #expect(sut.path.count == 2)
     }
-
-    func test_pop_removesTopItemInStack() {
-        let sut = makeSUT()
-
-        let route = UUID()
-        sut.navigate(to: route)
-
-        XCTAssertEqual(sut.path.count, 1)
-
+    
+    @Test("Pop action drops item from stacvk")
+    func removesItemInStack() {
+        let fixtures = TestFixtures()
+        let sut = fixtures.makeSUT()
+        
+        sut.navigate(to: UUID())
         sut.pop()
-
-        XCTAssertTrue(sut.path.isEmpty)
+        
+        #expect(sut.path.isEmpty)
     }
 }
 
-private extension AppRouterTests {
-    func makeSUT(path: NavigationPath = .init(), file: StaticString = #filePath, line: UInt = #line) -> AppRouter {
-        let sut = AppRouter(with: path)
-        trackForMemoryLeaks(sut, file: file, line: line)
-        return sut
+extension AppRouterTests {
+    final class TestFixtures {
+        
+        private var sutTracker: MemoryLeakTracker<AppRouter>?
+        
+        deinit { sutTracker?.verify() }
+        
+        func makeSUT(path: NavigationPath = .init(), sourceLocation: SourceLocation = #_sourceLocation) -> AppRouter {
+            let sut = AppRouter(with: path)
+            sutTracker = .init(instance: sut, sourceLocation: sourceLocation)
+            return sut
+        }
     }
 }
