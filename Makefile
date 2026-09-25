@@ -1,29 +1,33 @@
-FASTLANE := bundle exec fastlane
 XCODEPROJ := BoilerplateApp/BoilerplateApp.xcodeproj
 SCHEME := CI_iOS
 DEVICE := iPhone 17
 OS_VERSION := 27.0
 
-# Targets
+XCODEBUILD := xcodebuild \
+	-project $(XCODEPROJ) \
+	-scheme $(SCHEME) \
+	-sdk iphonesimulator \
+	-destination 'platform=iOS Simulator,name=$(DEVICE),OS=$(OS_VERSION)' \
+	OTHER_SWIFT_FLAGS="-D SKIP_FORMAT"
+
 .PHONY: help
 help:
 	@echo "Available tasks:"
-	@echo "  make test           # Run unit tests on the $(DEVICE) simulator with iOS $(OS_VERSION)"
-	@echo "  make build          # Build the project for the $(DEVICE) simulator with iOS $(OS_VERSION)"
+	@echo "  make test           # Run unit tests"
+	@echo "  make build          # Build the project"
 	@echo "  make clean          # Clean the project"
 	@echo "  make help           # Display this help message"
-	@echo ""
-	
+
 .PHONY: test
 test:
-	xcodebuild -project $(XCODEPROJ) -scheme $(SCHEME) -sdk iphonesimulator -destination 'platform=iOS Simulator,name=$(DEVICE),OS=$(OS_VERSION)' OTHER_SWIFT_FLAGS="-D SKIP_FORMAT" clean build test
+	$(XCODEBUILD) test
+
 .PHONY: build
 build:
-	xcodebuild -project $(XCODEPROJ) -scheme $(SCHEME) -sdk iphonesimulator -destination 'platform=iOS Simulator,name=$(DEVICE),OS=$(OS_VERSION)' OTHER_SWIFT_FLAGS="-D SKIP_FORMAT" clean build
+	$(XCODEBUILD) build
 
 .PHONY: clean
 clean:
-	xcodebuild -project $(XCODEPROJ) -scheme $(SCHEME) clean
+	$(XCODEBUILD) clean
 
 .DEFAULT_GOAL := help
-

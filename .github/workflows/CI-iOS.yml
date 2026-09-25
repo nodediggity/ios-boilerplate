@@ -1,15 +1,18 @@
 name: CI-iOS
+
 on:
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
   build-and-test:
     runs-on: xcode-27
-    steps:
-      - uses: actions/checkout@v4
 
-      - name: Show Xcode
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Show Xcode version
         run: xcodebuild -version
 
       - name: Create Secrets.xcconfig
@@ -18,5 +21,23 @@ jobs:
         run: |
           echo "$SECRETS_XCCONFIG" | base64 --decode > BoilerplateApp/BoilerplateApp/Config/Secrets.xcconfig
 
-      - name: Build and Test
-        run: make test
+      - name: Cache Xcode DerivedData
+        uses: actions/cache@v4
+        with:
+          path: ~/Library/Developer/Xcode/DerivedData
+          key: ${{ runner.os }}-xcode-deriveddata-${{ hashFiles('**/Package.resolved', '**/*.xcodeproj/project.pbxproj') }}
+          restore-keys: |
+            ${{ runner.os }}-xcode-deriveddata-
+
+      - name: Cache Swift Package Manager
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/Library/Caches/org.swift.swiftpm
+            ~/Library/org.swift.swiftpm
+          key: ${{ runner.os }}-spm-${{ hashFiles('**/Package.resolved') }}
+          restore-keys: |
+            ${{ runner.os }}-spm-
+
+      - name: Test
+        run: time make test
