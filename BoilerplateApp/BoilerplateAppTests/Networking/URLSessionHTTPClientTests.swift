@@ -111,6 +111,7 @@ private extension URLSessionHTTPClientTests {
         XCTAssertEqual(captured.allHTTPHeaderFields, expected.allHTTPHeaderFields, file: file, line: line)
     }
 
+    @MainActor
     func resultErrorFor(data: Data?, response: URLResponse?, error: Error?, file: StaticString = #filePath, line: UInt = #line) async -> Error? {
         URLProtocolStub.stub(data: data, response: response, error: error)
         let sut = makeSUT(file: file, line: line)
@@ -125,6 +126,7 @@ private extension URLSessionHTTPClientTests {
         }
     }
 
+    @MainActor
     func resultValuesFor(data: Data?, response: URLResponse?, error: Error?, file: StaticString = #filePath, line: UInt = #line) async -> (data: Data, response: HTTPURLResponse)? {
         URLProtocolStub.stub(data: data, response: response, error: error)
         let sut = makeSUT(file: file, line: line)
